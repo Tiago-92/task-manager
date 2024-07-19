@@ -8,7 +8,7 @@
     <title>Task Manager</title>
   </head>
   <body>
-    <main class="flex flex-row w-full">
+    <main class="flex flex-row w-full h-full">
       <div class="w-[300px] mt-7 ml-4 flex flex-col">
         <span class="text-4xl"><span class="text-slate-900">task</span>.<span class="text-purple-700">manager</span>
         <div class="mt-14 text-3xl w-[300px] flex flex-col  text-purple-900">
@@ -36,56 +36,28 @@
           />
         </header>
 
-        <section class="flex mt-6 gap-4">
-          <button
+        <section class="flex mt-6 gap-4" id="status-container">
+          <template id="status-template">
+            <button
             class="w-52 h-40 flex flex-col gap-4 p-4 text-[22px] text-gray-800 border border-gray-200 rounded-lg bg-gray-100 hover:border hover:border-purple-400"
-          >
-            <span>Pendentes</span>
-            <span class="text-4xl text-gray-950">5</span>
-          </button>
-          <button
-            class="w-52 h-40 flex flex-col gap-4 p-4 text-[22px] text-gray-800 border border-gray-200 rounded-lg bg-gray-100"
-          >
-            <span>Em execução</span>
-            <span class="text-4xl text-gray-950">5</span>
-          </button>
-          <button
-            class="w-52 h-40 flex flex-col gap-4 p-4 text-[22px] text-gray-800 border border-gray-200 rounded-lg bg-gray-100"
-          >
-            <span>Concluídas</span>
-            <span class="text-4xl text-gray-950">5</span>
-          </button>
-          <button
-            class="w-52 h-40 flex flex-col gap-4 p-4 text-[22px] text-gray-800 border border-gray-200 rounded-lg bg-gray-100"
-          >
-            <span>Canceladas</span>
-            <span class="text-4xl text-gray-950">5</span>
-          </button>
+            >
+              <span class="status">Pendentes</span>
+              <span class="text-4xl text-gray-950">5</span>
+            </button>
+          </template>
         </section>
 
-        <section class="w-full h-[950px] overflow-auto flex flex-row flex-wrap gap-4 mt-4">
-          <button class="w-[750px] h-[500px] p-6 border border-gray-200 rounded-lg flex flex-col hover:bg-gray-300 transition duration-300 ease-in-out hover:border hover:border-purple-400">
-            <p class="w-full pb-2 text-left text-4xl text-purple-800 border-b-2 border-dashed border-gray-300">Estudar Node</p>
-            <p class="text-xl mt-3">a 12 dias</p>
-            <p class="text-2xl text-left mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a corrupti unde quisquam aspernatur harum minima necessitatibus, repellendus ea fugit sequi ab? Recusandae est, rem amet impedit ipsam atque. Enim? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt nihil iure corporis accusamus voluptates. Cum, nostrum dolor minus harum sapiente accusamus molestias, ad obcaecati, ipsam assumenda ratione rerum distinctio rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa debitis libero, quam a illum rerum dolores enim ea quo odio blanditiis placeat architecto consectetur suscipit modi, nulla quibusdam, at asperiores.</p>
-          </button>
-          <button class="w-[750px] h-[500px] p-6 border border-gray-200 rounded-lg flex flex-col hover:bg-gray-300 transition duration-300 ease-in-out hover:border hover:border-purple-400">
-            <p class="w-full pb-2 text-left text-4xl text-purple-800 border-b-2 border-dashed border-gray-300">Estudar Node</p>
-            <p class="text-xl mt-3">a 12 dias</p>
-            <p class="text-2xl text-left mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a corrupti unde quisquam aspernatur harum minima necessitatibus, repellendus ea fugit sequi ab? Recusandae est, rem amet impedit ipsam atque. Enim? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt nihil iure corporis accusamus voluptates. Cum, nostrum dolor minus harum sapiente accusamus molestias, ad obcaecati, ipsam assumenda ratione rerum distinctio rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa debitis libero, quam a illum rerum dolores enim ea quo odio blanditiis placeat architecto consectetur suscipit modi, nulla quibusdam, at asperiores.</p>
-          </button>
-          <button class="w-[750px] h-[500px] p-6 border border-gray-200 rounded-lg flex flex-col hover:bg-gray-300 transition duration-300 ease-in-out hover:border hover:border-purple-400">
-            <p class="w-full pb-2 text-left text-4xl text-purple-800 border-b-2 border-dashed border-gray-300">Estudar Node</p>
-            <p class="text-xl mt-3">a 12 dias</p>
-            <p class="text-2xl text-left mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a corrupti unde quisquam aspernatur harum minima necessitatibus, repellendus ea fugit sequi ab? Recusandae est, rem amet impedit ipsam atque. Enim? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt nihil iure corporis accusamus voluptates. Cum, nostrum dolor minus harum sapiente accusamus molestias, ad obcaecati, ipsam assumenda ratione rerum distinctio rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa debitis libero, quam a illum rerum dolores enim ea quo odio blanditiis placeat architecto consectetur suscipit modi, nulla quibusdam, at asperiores.</p>
-          </button>
-          <button class="w-[750px] h-[500px] p-6 border border-gray-200 rounded-lg flex flex-col hover:bg-gray-300 transition duration-300 ease-in-out hover:border hover:border-purple-400">
-            <p class="w-full pb-2 text-left text-4xl text-purple-800 border-b-2 border-dashed border-gray-300">Estudar Node</p>
-            <p class="text-xl mt-3">a 12 dias</p>
-            <p class="text-2xl text-left mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a corrupti unde quisquam aspernatur harum minima necessitatibus, repellendus ea fugit sequi ab? Recusandae est, rem amet impedit ipsam atque. Enim? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt nihil iure corporis accusamus voluptates. Cum, nostrum dolor minus harum sapiente accusamus molestias, ad obcaecati, ipsam assumenda ratione rerum distinctio rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa debitis libero, quam a illum rerum dolores enim ea quo odio blanditiis placeat architecto consectetur suscipit modi, nulla quibusdam, at asperiores.</p>
-          </button>
-        </section>
+        <div id="task-container" class="w-full mt-4 flex flex-wrap gap-4">
+          <template id="task-template">
+            <button class="w-[500px] h-[350px] p-6 border border-gray-200 rounded-lg flex flex-col hover:bg-gray-300 transition duration-300 ease-in-out hover:border hover:border-purple-400">
+              <p class="w-full pb-2 text-left text-2xl text-purple-800 border-b-2 border-dashed border-gray-300 task-title"></p>
+              <p class="text-lg mt-3 task-date"></p>
+              <p class="text-xl text-left mt-4 task-description"></p>
+            </button>
+          </template>
+        </div>
       </div>
     </main>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
