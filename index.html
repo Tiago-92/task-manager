@@ -1,61 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="./styles/output.css" />
-    <title>Task Manager</title>
-  </head>
-  <body>
-    <main class="flex flex-row w-full h-full">
-      <div class="w-[300px] mt-7 ml-4 flex flex-col">
-        <span class="text-4xl"><span class="text-slate-900">task</span>.<span class="text-purple-700">manager</span>
-        <div class="mt-14 text-3xl w-[300px] flex flex-col  text-purple-900">
-          <a class="text-2xl p-1 text-purple-900 hover:bg-gray-200 hover:border hover:border-purple-300 rounded-md transition duration-300 ease-in-out cursor-pointer">Home</a>
-          <a class="text-2xl p-1 text-purple-900 hover:bg-gray-200 hover:border hover:border-purple-300 rounded-md transition duration-300 ease-in-out cursor-pointer">Dashboard</a>
-          <a class="text-2xl p-1 text-purple-900 hover:bg-gray-200 hover:border hover:border-purple-300 rounded-md transition duration-300 ease-in-out cursor-pointer">Em breve</a>
-          <a class="text-2xl p-1 text-purple-900 hover:bg-gray-200 hover:border hover:border-purple-300 rounded-md transition duration-300 ease-in-out cursor-pointer">Em breve</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/output.css" />
+  <title>Task Manager</title>
+</head>
+<body>
+  <main class="flex flex-row w-full h-full">
+    <div class="w-[300px] mt-7 ml-4 flex flex-col">
+      <span class="text-4xl">
+        <span class="text-slate-900">task</span>.<span class="text-purple-700">manager</span>
+      </span>
+      <div class="mt-14 text-3xl w-[300px] flex flex-col text-purple-900">
+        <a class="text-2xl p-1 text-purple-900 hover:bg-gray-200 hover:border hover:border-purple-300 rounded-md transition duration-300 ease-in-out cursor-pointer">Home</a>
+        <a class="text-2xl p-1 text-purple-900 hover:bg-gray-200 hover:border hover:border-purple-300 rounded-md transition duration-300 ease-in-out cursor-pointer">Dashboard</a>
+        <a class="text-2xl p-1 text-purple-900 hover:bg-gray-200 hover:border hover:border-purple-300 rounded-md transition duration-300 ease-in-out cursor-pointer">Em breve</a>
+        <a class="text-2xl p-1 text-purple-900 hover:bg-gray-200 hover:border hover:border-purple-300 rounded-md transition duration-300 ease-in-out cursor-pointer">Em breve</a>
       </div>
+    </div>
 
-      <div
-        class="h-[960px] w-full mt-2 ml-3 mr-5 pl-5 border border-gray-200 rounded-lg bg-white"
-      >
-        <header class="w-full flex flex-row justify-between mt-4 bg-white">
-          <div>
-            <h1 class="text-4xl text-slate-950">Home</h1>
-            <h2 class="text-2xl text-gray-500">
-              Gerencie suas principais tarefas
-            </h2>
-          </div>
-          <input
-            class="w-80 h-14 mr-4 mt-2 border border-gray-300 bg-gray-200 rounded-md text-2xl placeholder:text-2xl pl-3 text-gray-400"
-            placeholder="Pesquisar tarefa"
-            id="look-for"
-          />
-        </header>
-
-        <section class="flex mt-6 gap-4" id="status-container">
-          <template id="status-template">
-            <button class="w-52 h-40 flex flex-col gap-4 p-4 text-[22px] text-gray-800 border border-gray-200 rounded-lg bg-gray-100 hover:border hover:border-purple-400">
-              <span class="status-text"></span>
-              <span class="status-length text-4xl text-gray-950"></span>
-            </button>
-          </template>
-        </section>
-
-        <div id="task-container" class="w-full mt-4 flex flex-wrap gap-4">
-          <template id="task-template">
-            <button class="w-[500px] h-[350px] p-6 border border-gray-200 rounded-lg flex flex-col hover:bg-gray-300 transition duration-300 ease-in-out hover:border hover:border-purple-400">
-              <p class="w-full pb-2 text-left text-2xl text-purple-800 border-b-2 border-dashed border-gray-300 task-title"></p>
-              <p class="text-lg mt-3 task-date"></p>
-              <p class="text-xl text-left mt-4 task-description"></p>
-            </button>
-          </template>
+    <div class="h-[960px] w-full mt-2 ml-3 mr-5 pl-5 border border-gray-200 rounded-lg bg-white">
+      <header class="w-full flex flex-row justify-between mt-4 bg-white">
+        <div>
+          <h1 class="text-4xl text-slate-950">Home</h1>
+          <h2 class="text-2xl text-gray-500">Gerencie suas principais tarefas</h2>
         </div>
+        <input
+          class="w-80 h-14 mr-4 mt-2 border border-gray-300 bg-gray-200 rounded-md text-2xl placeholder:text-2xl pl-3 text-gray-400"
+          placeholder="Pesquisar tarefa"
+          id="task-filter"
+        />
+      </header>
+
+      <section class="flex mt-6 gap-4" id="status-container">
+        <template id="status-template">
+          <button class="w-52 h-40 flex flex-col gap-4 p-4 text-[22px] text-gray-800 border border-gray-200 rounded-lg bg-gray-100 hover:border hover:border-purple-400">
+            <span class="status-text"></span>
+            <span class="status-length text-4xl text-gray-950"></span>
+          </button>
+        </template>
+      </section>
+
+      <div id="task-container" class="w-full mt-4 flex flex-wrap gap-4">
+        <template id="task-template">
+          <button class="w-[500px] h-[350px] p-6 border border-gray-200 rounded-lg flex flex-col hover:bg-gray-300 transition duration-300 ease-in-out hover:border hover:border-purple-400">
+            <p class="w-full pb-2 text-left text-2xl text-purple-800 border-b-2 border-dashed border-gray-300 task-title"></p>
+            <p class="text-lg mt-3 task-date"></p>
+            <p class="text-xl text-left mt-4 task-description"></p>
+          </button>
+        </template>
       </div>
-    </main>
-    <script type="module" src="script.js"></script>
-  </body>
+    </div>
+  </main>
+  <script type="module" src="script.js"></script>
+</body>
 </html>
